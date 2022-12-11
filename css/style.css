@@ -79,7 +79,7 @@ img {
   left: 0;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 13.5px) ;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -93,7 +93,8 @@ img {
 }
 
 .start-modal {
-  background: url(../images/main-img.jpg) center no-repeat;
+  background: url(../images/main-img.jpg) center no-repeat ;
+  background-size: cover;
   box-shadow: inset 0 0 20px;
   color: #000;
 }
@@ -149,15 +150,8 @@ img {
 /* ===============================finish-wrap */
 .finish-modal {
   background: url(../images/endbanner.jpg) center no-repeat;
+  background-size: cover;
 }
-
-/* .open-modal {
-  display: block;
-}
-
-.close-modal {
-  display: none;
-} */
 
 
 .count {
@@ -167,7 +161,7 @@ img {
   font-weight: 900;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 4px;
+  bottom: 0px;
   font-size: 43px;
   letter-spacing: 4px;
 }
@@ -189,7 +183,6 @@ img {
 
 .timebox {
   position: relative;
-  top: -10px;
   margin-left: 30px;
   width: 1170px;
 
@@ -203,8 +196,8 @@ img {
 
 .clock {
   position: absolute;
-  bottom: -9px;
-  left: -10px;
+  bottom: -20px;
+  left: -7px;
   width: 100px;
   animation: clock 4400ms ease infinite;
   animation-delay: 2000ms;
