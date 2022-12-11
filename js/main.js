@@ -56,42 +56,42 @@ const images = [
     xPos : [182,425,79,57,164],
     yPos : [43,639,621,389,472],
   },
-  // {
-  //   id : 2,
-  //   url1 : "./images/simpsons2-1.jpg",
-  //   url2 : "./images/simpsons2-2.jpg",
-  //   xPos : [153,65,280,348,475],
-  //   yPos : [64,378,751,469,263],
-  // },
-  // {
-  //   id : 3,
-  //   url1 : "./images/simpsons3-1.jpg",
-  //   url2 : "./images/simpsons3-2.jpg",
-  //   xPos : [184,73,428,308],
-  //   yPos : [524,87,457,385],
-  // },
-  // {
+  {
+    id : 2,
+    url1 : "./images/simpsons2-1.jpg",
+    url2 : "./images/simpsons2-2.jpg",
+    xPos : [153,65,280,348,475],
+    yPos : [64,378,751,469,263],
+  },
+  {
+    id : 3,
+    url1 : "./images/simpsons3-1.jpg",
+    url2 : "./images/simpsons3-2.jpg",
+    xPos : [184,73,428,308],
+    yPos : [524,87,457,385],
+  },
+  {
   
-  //   id : 4,
-  //   url1 : "./images/simpsons4-1.jpg",
-  //   url2 : "./images/simpsons4-2.jpg",
-  //   xPos : [186,434,372,445],
-  //   yPos : [86,71,492,252],
-  // },
-  // {
-  //   id : 5,
-  //   url1 : "./images/simpsons5-1.jpg",
-  //   url2 : "./images/simpsons5-2.jpg",
-  //   xPos : [555,289,99,488],
-  //   yPos : [83,154,774,582],
-  // },
-  // {
-  //   id : 6,
-  //   url1 : "./images/simpsons6-1.jpg",
-  //   url2 : "./images/simpsons6-2.jpg",
-  //   xPos : [359,393,51,79,380,279],
-  //   yPos : [585,220,404,81,354,477],
-  // },
+    id : 4,
+    url1 : "./images/simpsons4-1.jpg",
+    url2 : "./images/simpsons4-2.jpg",
+    xPos : [186,434,372,445],
+    yPos : [86,71,492,252],
+  },
+  {
+    id : 5,
+    url1 : "./images/simpsons5-1.jpg",
+    url2 : "./images/simpsons5-2.jpg",
+    xPos : [555,289,99,488],
+    yPos : [83,154,774,582],
+  },
+  {
+    id : 6,
+    url1 : "./images/simpsons6-1.jpg",
+    url2 : "./images/simpsons6-2.jpg",
+    xPos : [359,393,51,79,380,279],
+    yPos : [585,220,404,81,354,477],
+  },
 ]
 
 const modalObj = {

@@ -161,7 +161,7 @@ img {
   font-weight: 900;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0px;
+  bottom: -5px;
   font-size: 43px;
   letter-spacing: 4px;
 }
