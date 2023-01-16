@@ -7,10 +7,11 @@
 }
 
 body {
-  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-touch-callout: none; /* Safari */
   -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* 인터넷익스플로러 */
+  -ms-user-select: none; /* ie */
   user-select: none;
+  background-color: #000;
 }
 
 img {
@@ -34,10 +35,8 @@ img {
 }
 
 .hurry {
-  animation: hurryEffact 500ms linear infinite;
+  animation: hurryEffact 250ms linear infinite alternate;
 }
-
-
 
 .hurry > .timebox > .time-bar {
   background-color: #ee3134;
@@ -47,8 +46,6 @@ img {
   /* event */
   animation: clickFalse 330ms linear;
 }
-
-
 
 .check {
   position: absolute;
@@ -71,7 +68,6 @@ img {
 }
 
 
-
 /* ===============modal================ */
 .modal{
   display: none;
@@ -89,7 +85,6 @@ img {
 .start-modal {
   display: block;
   z-index: 4000;
-  /* display: none; */
 }
 
 .start-modal {
@@ -142,6 +137,7 @@ img {
   height: 139px;
   transition: transform 200ms ease;
 }
+
 .fail-modal .retry:hover {
   background: url(../images/tryagain2.png) center no-repeat;
   transform: scale(1.07);
@@ -152,7 +148,6 @@ img {
   background: url(../images/endbanner.jpg) center no-repeat;
   background-size: cover;
 }
-
 
 .count {
   position: absolute;
@@ -185,10 +180,10 @@ img {
   position: relative;
   margin-left: 30px;
   width: 1170px;
-
   height: 49px;
   background-color: #c6c6c6;
 }
+
 .timebox .time-bar {
   height: 100%;
   background-color: #f8d93d;
@@ -199,38 +194,23 @@ img {
   bottom: -20px;
   left: -7px;
   width: 100px;
-  animation: clock 4400ms ease infinite;
+  animation: clock 100ms ease infinite alternate;
   animation-delay: 2000ms;
 }
+
 .clock img {
   width: 100%;
 }
 
 @keyframes clock {
-  0% {transform: rotate(-7deg);}
-  1% {transform: rotate(7deg);}
-  2% {transform: rotate(-7deg);}
-  3% {transform: rotate(7deg);}
-  4% {transform: rotate(-7deg);}
-  5% {transform: rotate(7deg);}
-  6% {transform: rotate(-7deg);}
-  7% {transform: rotate(7deg);}
-  8% {transform: rotate(-7deg);}
-  9% {transform: rotate(7deg);}
-  8% {transform: rotate(-7deg);}
-  10% {transform: rotate(7deg);}
-  11% {transform: rotate(-7deg);}
-  12% {transform: rotate(7deg);}
-  13% {transform: rotate(-7deg);}
-  14% {transform: rotate(7deg);}
-  15% {transform: rotate(0deg);}
+  50% {transform: rotate(-7deg);}
+  100% {transform: rotate(7deg);}
 }
 
 
 @keyframes hurryEffact {
   0% {box-shadow: 0 0 60px 0px;}
-  50% {box-shadow: 0 0 100px 10px;}
-  100% {box-shadow: 0 0 60px 0px;}
+  100% {box-shadow: 0 0 100px 10px;}
 }
 
 @keyframes clickFalse {
