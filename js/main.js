@@ -32,11 +32,6 @@
     18.모달 스크립트 작성 
     19. 마지막 전체적인 디자인하기;
 
-  */
-
-  /* 
-  TODO
-
     1., 마우스포인터 디자인
     5. 동그라미 엑스표 애니메이션
     5.css정리 
@@ -135,7 +130,7 @@ function isSetObj () {
 
 //카운터를 브라우저에 출력 
 const printCounter = () => {
-  images.forEach((obj)=>{
+  images.forEach( obj => {
     if (obj.id === setObj.readItem().id) {
       $count.textContent = (obj.xPos.length - setObj.readItem().xPos.length) + "/" + obj.xPos.length;
     }
@@ -154,7 +149,7 @@ const renderImg = () => {
 }
 
 //모달 이미지 랜더링
-const renderModal = (state) => {
+const renderModal = state => {
   for (const key in modalObj) {
     if (key === state) {
       $modal.setAttribute('style',"")
@@ -247,7 +242,7 @@ const createCricle  = (evnt,truePos) => {
     imgContain.appendChild(checkL)
     imgContain.nextElementSibling?.appendChild(checkR) ?? imgContain.previousElementSibling.appendChild(checkR)
 
-    checks.forEach(c => {
+    checks.forEach( c => {
       c.classList.add('check')
       c.style.left = truePos[0] - (checkL.offsetWidth / 2) + "px";
       c.style.top = truePos[1] - (checkL.offsetHeight / 2) + "px";
@@ -256,7 +251,7 @@ const createCricle  = (evnt,truePos) => {
 
 
   //좌표에 엑스(.cross)를 생성/브라우저 렌더링
-  const createCross = (evnt) => {
+  const createCross = evnt => {
     let cross = document.createElement('div')
     let imgContain = evnt.target.parentElement;
     cross.textContent = "X"
@@ -272,7 +267,7 @@ const createCricle  = (evnt,truePos) => {
 
 //1. 객체에 담긴 xy좌표의 범위내에 클릭 좌표가 해당되면 함수를 실행
 //2. 틀린그림 모두 맞추면 setNextStage() 함수 실행
-const checkPicture = (evnt) => {
+const checkPicture = evnt => {
   let range = options.range; //정답 인식 범위 
   let offsetY =  evnt.offsetY;
   let offsetX =  evnt.offsetX;
@@ -320,17 +315,17 @@ const checkPicture = (evnt) => {
   currentTime -= 5;
   createCross(evnt)
   $gameBox.classList.add("click-false")
-  setTimeout(()=>$gameBox.classList.remove("click-false"),340)//에니메이션 종료 후 실행
+  setTimeout( () => $gameBox.classList.remove("click-false"),340)//에니메이션 종료 후 실행
 
 } //checkPicture
 
-$imgBox.addEventListener('click', (e)=>{
+$imgBox.addEventListener('click', e =>{
   if (e.target.tagName == 'IMG') checkPicture(e)
 })
 
 
 //다시 게임 시작 
-const tryAgain = (e) => {
+const tryAgain = e => {
   if (!["retry","retry-img"].includes(e.target.className)) return
   reset()
   $modal.style.display = "none"
@@ -338,7 +333,7 @@ const tryAgain = (e) => {
 
 
 //처음 게임 시작 
-const startNewGame = (e) => {
+const startNewGame = e => {
   if (e.target.className !== "start" ) return
   start = new Date().getTime();
   renderImg()
@@ -347,7 +342,7 @@ const startNewGame = (e) => {
   $modal.style.display = "none"
 }
 
-$modal.addEventListener('click',(e)=>{
+$modal.addEventListener('click', e => {
   startNewGame(e)
   tryAgain(e)
 })
