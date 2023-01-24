@@ -44,7 +44,7 @@ const options = {
   imminentAlarm : 50, //시간 임박 알림 실행값 (1~100) %단위로 실행 
 }
 
-const images = [
+const stage = [
   {
     id : 1,
     url1 : "./images/simpsons1-1.jpg",
@@ -110,11 +110,11 @@ const $modal = document.querySelector('.modal')
 const $count = document.querySelector('.count')
 
 
-//1. images원본 배열을 복사함  == closer
+//1. images원본 배열을 복사함 
 //2. 함수내 메서드가 배열내 객체를 (추출-readItem ,되섞기-reload ,삭제-delItem , 초기화-reset , 길이확인-itemLength)함 
 let setObj = isSetObj(); 
 function isSetObj () {
-  let cloneArr = JSON.parse(JSON.stringify(images))
+  let cloneArr = JSON.parse(JSON.stringify(stage))
   let readItem = cloneArr[Math.floor(Math.random() * cloneArr.length)]
   console.log("resetData");
 
@@ -130,12 +130,12 @@ function isSetObj () {
 
 //카운터를 브라우저에 출력 
 const printCounter = () => {
-  images.forEach( obj => {
+  stage.forEach( obj => {
     if (obj.id === setObj.readItem().id) {
       $count.textContent = (obj.xPos.length - setObj.readItem().xPos.length) + "/" + obj.xPos.length;
     }
   })
-  console.log( images.length - setObj.itemLength() + 1,"/",images.length) //(스테이지 정보) 적용 안함
+  console.log( stage.length - setObj.itemLength() + 1,"/",stage.length) //(스테이지 정보) 적용 안함
 }
 printCounter() //load deFault
 
